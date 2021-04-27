@@ -1,0 +1,54 @@
+{
+  "name": "ltl96bot",
+  "version": "1.0.0",
+  "description": "A bot for Leonard's Wong Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gcloud app deploy",
+    "start": "node index.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test app",
+    "e2e-test": "samples test deploy"
+  },
+  "author": "Leonard Wong",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "huh": "^2.0.1",
+    "mssql": "^4.0.4",
+    "node-telegram-bot-api": "^0.27.1"
+  },
+  "engines": {
+    "node": "4.1.2",
+    "npm": "4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leothelion96/ltl96bot"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "Leonard",
+    "Leonard Wong",
+    "ltl96",
+    "ltl96bot",
+    "leothelion96",
+    "Leonard Wong Portfolio Bot"
+  ],
+  "devDependencies": {
+    "claudia": "^2.12.1"
+  }
+}
